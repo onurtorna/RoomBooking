@@ -14,6 +14,10 @@
 		0C2898282088A9DD00079470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C2898262088A9DD00079470 /* LaunchScreen.storyboard */; };
 		0C2898332088A9DD00079470 /* RoomBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898322088A9DD00079470 /* RoomBookingTests.swift */; };
 		0C28983E2088A9DD00079470 /* RoomBookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28983D2088A9DD00079470 /* RoomBookingUITests.swift */; };
+		0C2898532088B57C00079470 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898522088B57C00079470 /* Request.swift */; };
+		0C2898552088C0A300079470 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898542088C0A300079470 /* NetworkManager.swift */; };
+		0C2898572088D13F00079470 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898562088D13F00079470 /* HTTPMethod.swift */; };
+		0C28985A2088D25300079470 /* GetRoomsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898592088D25300079470 /* GetRoomsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		0C28983D2088A9DD00079470 /* RoomBookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomBookingUITests.swift; sourceTree = "<group>"; };
 		0C28983F2088A9DD00079470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C28984E2088AB7100079470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C2898522088B57C00079470 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		0C2898542088C0A300079470 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0C2898562088D13F00079470 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		0C2898592088D25300079470 /* GetRoomsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +105,10 @@
 		0C28981C2088A9DB00079470 /* RoomBooking */ = {
 			isa = PBXGroup;
 			children = (
-				0C2898502088AE6E00079470 /* Storyboards */,
-				0C28984F2088AE5E00079470 /* Resources */,
 				0C28981D2088A9DB00079470 /* AppDelegate.swift */,
+				0C2898512088B49500079470 /* Network */,
+				0C28984F2088AE5E00079470 /* Resources */,
+				0C2898502088AE6E00079470 /* Storyboards */,
 				0C28981F2088A9DB00079470 /* ViewController.swift */,
 			);
 			path = RoomBooking;
@@ -139,6 +148,25 @@
 				0C2898262088A9DD00079470 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0C2898512088B49500079470 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0C2898582088D24000079470 /* Rooms */,
+				0C2898522088B57C00079470 /* Request.swift */,
+				0C2898542088C0A300079470 /* NetworkManager.swift */,
+				0C2898562088D13F00079470 /* HTTPMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0C2898582088D24000079470 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				0C2898592088D25300079470 /* GetRoomsRequest.swift */,
+			);
+			path = Rooms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2898552088C0A300079470 /* NetworkManager.swift in Sources */,
 				0C2898202088A9DB00079470 /* ViewController.swift in Sources */,
+				0C2898532088B57C00079470 /* Request.swift in Sources */,
+				0C2898572088D13F00079470 /* HTTPMethod.swift in Sources */,
 				0C28981E2088A9DB00079470 /* AppDelegate.swift in Sources */,
+				0C28985A2088D25300079470 /* GetRoomsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RoomBooking/Info.plist;
+				INFOPLIST_FILE = RoomBooking/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,7 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RoomBooking/Info.plist;
+				INFOPLIST_FILE = RoomBooking/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
