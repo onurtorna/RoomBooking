@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C28981E2088A9DB00079470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28981D2088A9DB00079470 /* AppDelegate.swift */; };
-		0C2898202088A9DB00079470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28981F2088A9DB00079470 /* ViewController.swift */; };
+		0C2898202088A9DB00079470 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28981F2088A9DB00079470 /* LandingPageViewController.swift */; };
 		0C2898232088A9DB00079470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C2898212088A9DB00079470 /* Main.storyboard */; };
 		0C2898252088A9DD00079470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C2898242088A9DD00079470 /* Assets.xcassets */; };
 		0C2898282088A9DD00079470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C2898262088A9DD00079470 /* LaunchScreen.storyboard */; };
@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		0C28981A2088A9DB00079470 /* RoomBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoomBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C28981D2088A9DB00079470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C28981F2088A9DB00079470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C28981F2088A9DB00079470 /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		0C2898242088A9DD00079470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C2898272088A9DD00079470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C2898292088A9DD00079470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 				0C28984F2088AE5E00079470 /* Resources */,
 				0CC82428208A1E60000F5D86 /* Scenes */,
 				0C2898502088AE6E00079470 /* Storyboards */,
-				0C28981F2088A9DB00079470 /* ViewController.swift */,
 			);
 			path = RoomBooking;
 			sourceTree = "<group>";
@@ -203,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0CC8242C208A1F74000F5D86 /* Network */,
+				0CC8242F208A257A000F5D86 /* View */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -214,6 +214,14 @@
 				0CC8242D208A200B000F5D86 /* LandingPageDataController.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		0CC8242F208A257A000F5D86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C28981F2088A9DB00079470 /* LandingPageViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +357,7 @@
 				0C2898552088C0A300079470 /* NetworkManager.swift in Sources */,
 				0CC8242E208A200B000F5D86 /* LandingPageDataController.swift in Sources */,
 				0CC824232089B806000F5D86 /* Room.swift in Sources */,
-				0C2898202088A9DB00079470 /* ViewController.swift in Sources */,
+				0C2898202088A9DB00079470 /* LandingPageViewController.swift in Sources */,
 				0CC824272089FC00000F5D86 /* Response.swift in Sources */,
 				0C2898532088B57C00079470 /* Request.swift in Sources */,
 				0CC8242B208A1F37000F5D86 /* LandingPageDataProvider.swift in Sources */,
