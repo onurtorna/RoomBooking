@@ -23,6 +23,7 @@
 		0CC824272089FC00000F5D86 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC824262089FC00000F5D86 /* Response.swift */; };
 		0CC8242B208A1F37000F5D86 /* LandingPageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8242A208A1F37000F5D86 /* LandingPageDataProvider.swift */; };
 		0CC8242E208A200B000F5D86 /* LandingPageDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8242D208A200B000F5D86 /* LandingPageDataController.swift */; };
+		0CC82431208A260E000F5D86 /* LandingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC82430208A260E000F5D86 /* LandingPageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		0CC824262089FC00000F5D86 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		0CC8242A208A1F37000F5D86 /* LandingPageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageDataProvider.swift; sourceTree = "<group>"; };
 		0CC8242D208A200B000F5D86 /* LandingPageDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageDataController.swift; sourceTree = "<group>"; };
+		0CC82430208A260E000F5D86 /* LandingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		0CC82429208A1E6E000F5D86 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				0CC82430208A260E000F5D86 /* LandingPageViewModel.swift */,
 				0CC8242C208A1F74000F5D86 /* Network */,
 				0CC8242F208A257A000F5D86 /* View */,
 			);
@@ -357,6 +360,7 @@
 				0C2898552088C0A300079470 /* NetworkManager.swift in Sources */,
 				0CC8242E208A200B000F5D86 /* LandingPageDataController.swift in Sources */,
 				0CC824232089B806000F5D86 /* Room.swift in Sources */,
+				0CC82431208A260E000F5D86 /* LandingPageViewModel.swift in Sources */,
 				0C2898202088A9DB00079470 /* LandingPageViewController.swift in Sources */,
 				0CC824272089FC00000F5D86 /* Response.swift in Sources */,
 				0C2898532088B57C00079470 /* Request.swift in Sources */,

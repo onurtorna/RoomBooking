@@ -13,7 +13,7 @@ class LandingPageDataController: LandingPageDataProvider {
                      stringDate: String?,
                      completion: @escaping (GetRoomsResponse?, Error?) -> Void) {
 
-        let request = GetRoomsRequest(stringDate: "today", date: date)
+        let request = GetRoomsRequest(stringDate: stringDate, date: date)
         NetworkManager.shared.execute(with: request) { (data, response, error) in
 
             if let error = error {
