@@ -18,6 +18,7 @@
 		0C2898552088C0A300079470 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898542088C0A300079470 /* NetworkManager.swift */; };
 		0C2898572088D13F00079470 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898562088D13F00079470 /* HTTPMethod.swift */; };
 		0C28985A2088D25300079470 /* GetRoomsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898592088D25300079470 /* GetRoomsRequest.swift */; };
+		0CC824232089B806000F5D86 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC824222089B806000F5D86 /* Room.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0C2898542088C0A300079470 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0C2898562088D13F00079470 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		0C2898592088D25300079470 /* GetRoomsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomsRequest.swift; sourceTree = "<group>"; };
+		0CC824222089B806000F5D86 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				0C28981D2088A9DB00079470 /* AppDelegate.swift */,
+				0CC824212089B7E8000F5D86 /* Models */,
 				0C2898512088B49500079470 /* Network */,
 				0C28984F2088AE5E00079470 /* Resources */,
 				0C2898502088AE6E00079470 /* Storyboards */,
@@ -167,6 +170,14 @@
 				0C2898592088D25300079470 /* GetRoomsRequest.swift */,
 			);
 			path = Rooms;
+			sourceTree = "<group>";
+		};
+		0CC824212089B7E8000F5D86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0CC824222089B806000F5D86 /* Room.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C2898552088C0A300079470 /* NetworkManager.swift in Sources */,
+				0CC824232089B806000F5D86 /* Room.swift in Sources */,
 				0C2898202088A9DB00079470 /* ViewController.swift in Sources */,
 				0C2898532088B57C00079470 /* Request.swift in Sources */,
 				0C2898572088D13F00079470 /* HTTPMethod.swift in Sources */,
