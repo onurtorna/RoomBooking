@@ -38,13 +38,12 @@ final class GetRoomsRequest: Request {
         return nil
     }
 
-    convenience init(stringDate: String) {
-        self.init()
-        self.stringDate = stringDate
+    init(stringDate: String?, date: Date?) {
+        if let date = date {
+            self.date = date
+        } else if let stringDate = stringDate {
+            self.stringDate = stringDate
+        }
     }
 
-    convenience init(date: Date) {
-        self.init()
-        self.date = date
-    }
 }

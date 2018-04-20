@@ -19,6 +19,10 @@
 		0C2898572088D13F00079470 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898562088D13F00079470 /* HTTPMethod.swift */; };
 		0C28985A2088D25300079470 /* GetRoomsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2898592088D25300079470 /* GetRoomsRequest.swift */; };
 		0CC824232089B806000F5D86 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC824222089B806000F5D86 /* Room.swift */; };
+		0CC824252089B97E000F5D86 /* GetRoomsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC824242089B97E000F5D86 /* GetRoomsResponse.swift */; };
+		0CC824272089FC00000F5D86 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC824262089FC00000F5D86 /* Response.swift */; };
+		0CC8242B208A1F37000F5D86 /* LandingPageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8242A208A1F37000F5D86 /* LandingPageDataProvider.swift */; };
+		0CC8242E208A200B000F5D86 /* LandingPageDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8242D208A200B000F5D86 /* LandingPageDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		0C2898562088D13F00079470 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		0C2898592088D25300079470 /* GetRoomsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomsRequest.swift; sourceTree = "<group>"; };
 		0CC824222089B806000F5D86 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		0CC824242089B97E000F5D86 /* GetRoomsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomsResponse.swift; sourceTree = "<group>"; };
+		0CC824262089FC00000F5D86 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0CC8242A208A1F37000F5D86 /* LandingPageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageDataProvider.swift; sourceTree = "<group>"; };
+		0CC8242D208A200B000F5D86 /* LandingPageDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 				0CC824212089B7E8000F5D86 /* Models */,
 				0C2898512088B49500079470 /* Network */,
 				0C28984F2088AE5E00079470 /* Resources */,
+				0CC82428208A1E60000F5D86 /* Scenes */,
 				0C2898502088AE6E00079470 /* Storyboards */,
 				0C28981F2088A9DB00079470 /* ViewController.swift */,
 			);
@@ -158,6 +167,7 @@
 			children = (
 				0C2898582088D24000079470 /* Rooms */,
 				0C2898522088B57C00079470 /* Request.swift */,
+				0CC824262089FC00000F5D86 /* Response.swift */,
 				0C2898542088C0A300079470 /* NetworkManager.swift */,
 				0C2898562088D13F00079470 /* HTTPMethod.swift */,
 			);
@@ -168,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				0C2898592088D25300079470 /* GetRoomsRequest.swift */,
+				0CC824242089B97E000F5D86 /* GetRoomsResponse.swift */,
 			);
 			path = Rooms;
 			sourceTree = "<group>";
@@ -178,6 +189,31 @@
 				0CC824222089B806000F5D86 /* Room.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0CC82428208A1E60000F5D86 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0CC82429208A1E6E000F5D86 /* Landing */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0CC82429208A1E6E000F5D86 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				0CC8242C208A1F74000F5D86 /* Network */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		0CC8242C208A1F74000F5D86 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0CC8242A208A1F37000F5D86 /* LandingPageDataProvider.swift */,
+				0CC8242D208A200B000F5D86 /* LandingPageDataController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,9 +347,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C2898552088C0A300079470 /* NetworkManager.swift in Sources */,
+				0CC8242E208A200B000F5D86 /* LandingPageDataController.swift in Sources */,
 				0CC824232089B806000F5D86 /* Room.swift in Sources */,
 				0C2898202088A9DB00079470 /* ViewController.swift in Sources */,
+				0CC824272089FC00000F5D86 /* Response.swift in Sources */,
 				0C2898532088B57C00079470 /* Request.swift in Sources */,
+				0CC8242B208A1F37000F5D86 /* LandingPageDataProvider.swift in Sources */,
+				0CC824252089B97E000F5D86 /* GetRoomsResponse.swift in Sources */,
 				0C2898572088D13F00079470 /* HTTPMethod.swift in Sources */,
 				0C28981E2088A9DB00079470 /* AppDelegate.swift in Sources */,
 				0C28985A2088D25300079470 /* GetRoomsRequest.swift in Sources */,
