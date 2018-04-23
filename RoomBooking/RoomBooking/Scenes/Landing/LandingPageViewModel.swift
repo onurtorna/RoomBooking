@@ -11,7 +11,7 @@ class LandingPageState {
 
     enum Change {
         case loadingStateChanged(Bool)
-        case roomsFetched([Room]?)
+        case roomsFetched
     }
 
     var onChange: ((LandingPageState.Change) -> Void)?
@@ -21,7 +21,7 @@ class LandingPageState {
     }
 
     var roomList: [Room]? {
-        didSet { onChange?(.roomsFetched(roomList)) }
+        didSet { onChange?(.roomsFetched) }
     }
     
 }
@@ -47,8 +47,24 @@ final class LandingPageViewModel {
         }
     }
 
+    /// Returns total number of rooms
+    var roomCount: Int {
+        return state.roomList?.count ?? 0
+    }
+
     init(dataController: LandingPageDataProvider) {
         self.dataController = dataController
+    }
+
+    /// Returns room at given index if possible
+    func room(at index: Int) -> Room? {
+        guard let roomList = state.roomList,
+            roomCount > index
+            else {
+                return nil
+        }
+
+        return roomList[index]
     }
 }
 

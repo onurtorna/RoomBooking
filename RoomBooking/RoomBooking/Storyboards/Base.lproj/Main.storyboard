@@ -17,9 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-RE-DRK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zVU-we-q3g"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PWY-Pm-QiH">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4xJ-ll-RFj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CU7-68-U9k"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xdq-RE-DRK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Au-iH-erV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xdq-RE-DRK" secondAttribute="trailing" id="81L-6A-pSc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PWY-Pm-QiH" secondAttribute="bottom" id="OZE-7H-wo0"/>
+                            <constraint firstItem="PWY-Pm-QiH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c7e-C8-Grc"/>
+                            <constraint firstItem="Xdq-RE-DRK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fPC-E7-QXu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PWY-Pm-QiH" secondAttribute="trailing" id="raM-Qh-7Cf"/>
+                            <constraint firstItem="PWY-Pm-QiH" firstAttribute="top" secondItem="Xdq-RE-DRK" secondAttribute="bottom" id="zMT-4X-xnN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="filterHolderView" destination="Xdq-RE-DRK" id="mSt-k5-7Ar"/>
+                        <outlet property="tableView" destination="PWY-Pm-QiH" id="LN9-x8-zby"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
