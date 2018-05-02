@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C23CEB1208DDCC800FA66F7 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C23CEB0208DDCC800FA66F7 /* RoomTableViewCell.swift */; };
+		0C23CEB3208DDCDF00FA66F7 /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C23CEB2208DDCDF00FA66F7 /* RoomTableViewCell.xib */; };
 		0C28981E2088A9DB00079470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28981D2088A9DB00079470 /* AppDelegate.swift */; };
 		0C2898202088A9DB00079470 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28981F2088A9DB00079470 /* LandingPageViewController.swift */; };
 		0C2898232088A9DB00079470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C2898212088A9DB00079470 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C23CEB0208DDCC800FA66F7 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		0C23CEB2208DDCDF00FA66F7 /* RoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
 		0C28981A2088A9DB00079470 /* RoomBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoomBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C28981D2088A9DB00079470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C28981F2088A9DB00079470 /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C23CEAF208DDC9D00FA66F7 /* Reuseable Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C23CEB0208DDCC800FA66F7 /* RoomTableViewCell.swift */,
+				0C23CEB2208DDCDF00FA66F7 /* RoomTableViewCell.xib */,
+			);
+			path = "Reuseable Views";
+			sourceTree = "<group>";
+		};
 		0C2898112088A9DB00079470 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 				0CC824212089B7E8000F5D86 /* Models */,
 				0C2898512088B49500079470 /* Network */,
 				0C7225BC208DEB2300B5BE8C /* Protocols */,
+				0C23CEAF208DDC9D00FA66F7 /* Reuseable Views */,
 				0C28984F2088AE5E00079470 /* Resources */,
 				0CC82428208A1E60000F5D86 /* Scenes */,
 				0C2898502088AE6E00079470 /* Storyboards */,
@@ -343,6 +357,7 @@
 			files = (
 				0C2898282088A9DD00079470 /* LaunchScreen.storyboard in Resources */,
 				0C2898252088A9DD00079470 /* Assets.xcassets in Resources */,
+				0C23CEB3208DDCDF00FA66F7 /* RoomTableViewCell.xib in Resources */,
 				0C2898232088A9DB00079470 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +392,7 @@
 				0C2898532088B57C00079470 /* Request.swift in Sources */,
 				0C7225BE208DEB3900B5BE8C /* NibLoadable.swift in Sources */,
 				0CC8242B208A1F37000F5D86 /* LandingPageDataProvider.swift in Sources */,
+				0C23CEB1208DDCC800FA66F7 /* RoomTableViewCell.swift in Sources */,
 				0CC824252089B97E000F5D86 /* GetRoomsResponse.swift in Sources */,
 				0C2898572088D13F00079470 /* HTTPMethod.swift in Sources */,
 				0C28981E2088A9DB00079470 /* AppDelegate.swift in Sources */,

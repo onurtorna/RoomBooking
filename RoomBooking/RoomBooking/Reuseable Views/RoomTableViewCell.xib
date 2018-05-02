@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RoomTableViewCell" customModule="RoomBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="522" height="145"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUh-hw-0A2">
+                    <rect key="frame" x="15" y="15" width="94" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyV-3T-UIA">
+                    <rect key="frame" x="15" y="55.5" width="492" height="74.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2q4-Lu-KfQ">
+                    <rect key="frame" x="117" y="10.5" width="385" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="abV-Xh-l8N"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LyV-3T-UIA" secondAttribute="bottom" constant="15" id="0ib-5Z-gP4"/>
+                <constraint firstItem="FUh-hw-0A2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="AfE-La-Hxt"/>
+                <constraint firstItem="LyV-3T-UIA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="In5-8m-eLz"/>
+                <constraint firstItem="2q4-Lu-KfQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10.5" id="J8n-iQ-YWe"/>
+                <constraint firstItem="LyV-3T-UIA" firstAttribute="top" secondItem="2q4-Lu-KfQ" secondAttribute="bottom" constant="15" id="Y8a-6H-glG"/>
+                <constraint firstItem="2q4-Lu-KfQ" firstAttribute="leading" secondItem="FUh-hw-0A2" secondAttribute="trailing" constant="8" id="iBj-7n-W1R"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2q4-Lu-KfQ" secondAttribute="trailing" constant="20" id="j7i-pK-WJL"/>
+                <constraint firstItem="FUh-hw-0A2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="ssn-mR-GVz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LyV-3T-UIA" secondAttribute="trailing" constant="15" id="wwI-83-Yds"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="roomExplanationLabel" destination="LyV-3T-UIA" id="MLl-ZY-Rax"/>
+                <outlet property="roomNameLabel" destination="FUh-hw-0A2" id="Wpp-HB-8Nz"/>
+            </connections>
+            <point key="canvasLocation" x="107" y="-170.5"/>
+        </view>
+    </objects>
+</document>
