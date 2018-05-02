@@ -19,6 +19,10 @@ class LandingPageViewController: UIViewController {
 
         initializeViewModel()
         viewModel.fetchRooms(with: nil)
+        tableView.register(RoomTableViewCell.self, forCellReuseIdentifier: "RoomTableViewCell")
+        let nib = UINib(nibName: "RoomTableViewCell", bundle: nil)
+        tableView.register(nib,
+                           forCellReuseIdentifier: "RoomTableViewCell")
     }
 
     private func initializeViewModel() {
@@ -51,7 +55,14 @@ extension LandingPageViewController: UITableViewDelegate {
             else {
                 return UITableViewCell()
         }
-        
+
+        if let roomCell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell",
+                                                        for: indexPath) as? RoomTableViewCell {
+            roomCell.roomNameLabel.text = room.name
+            roomCell.roomExplanationLabel.text = "\(String(describing: room.capacity))"
+            return roomCell
+        }
+
         return UITableViewCell()
     }
 }
