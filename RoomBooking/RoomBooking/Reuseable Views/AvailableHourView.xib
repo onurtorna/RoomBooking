@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AvailableHourView" customModule="RoomBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jmN-aY-e7h">
+                    <rect key="frame" x="5" y="9.5" width="370" height="103.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAb-oM-KyU">
+                            <rect key="frame" x="0.0" y="0.0" width="92.5" height="103.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vke-G1-Wnx">
+                            <rect key="frame" x="92.5" y="0.0" width="92.5" height="103.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r92-h7-EeX">
+                            <rect key="frame" x="185" y="0.0" width="92.5" height="103.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehd-c1-8Co">
+                            <rect key="frame" x="277.5" y="0.0" width="92.5" height="103.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zKB-HU-OCw">
+                    <rect key="frame" x="0.0" y="5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zKB-HU-OCw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="18f-El-Z18"/>
+                <constraint firstItem="zKB-HU-OCw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="Fhu-l6-al2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jmN-aY-e7h" secondAttribute="trailing" id="KE9-rN-Qse"/>
+                <constraint firstAttribute="bottom" secondItem="jmN-aY-e7h" secondAttribute="bottom" id="dIx-ra-kG2"/>
+                <constraint firstItem="jmN-aY-e7h" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="qbh-HZ-5GM"/>
+                <constraint firstItem="jmN-aY-e7h" firstAttribute="top" secondItem="zKB-HU-OCw" secondAttribute="bottom" constant="5" id="zcU-r4-JUn"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="firstQuarterView" destination="nAb-oM-KyU" id="hQU-xf-zY6"/>
+                <outlet property="fourthQuarterView" destination="ehd-c1-8Co" id="qJm-dq-RqQ"/>
+                <outlet property="hourLabel" destination="zKB-HU-OCw" id="Y49-32-iKH"/>
+                <outlet property="secondQuarterView" destination="vke-G1-Wnx" id="FjZ-fn-UEr"/>
+                <outlet property="thirdQuarterView" destination="r92-h7-EeX" id="aU0-LQ-1cj"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-191.5"/>
+        </view>
+    </objects>
+</document>

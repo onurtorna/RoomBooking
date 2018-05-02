@@ -53,6 +53,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="availableHoursContainerView" destination="2q4-Lu-KfQ" id="gv6-b1-Wu9"/>
                 <outlet property="roomExplanationLabel" destination="LyV-3T-UIA" id="MLl-ZY-Rax"/>
                 <outlet property="roomNameLabel" destination="FUh-hw-0A2" id="Wpp-HB-8Nz"/>
             </connections>
