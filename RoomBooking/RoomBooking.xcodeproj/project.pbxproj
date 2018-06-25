@@ -31,6 +31,10 @@
 		0CC8242B208A1F37000F5D86 /* LandingPageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8242A208A1F37000F5D86 /* LandingPageDataProvider.swift */; };
 		0CC8242E208A200B000F5D86 /* LandingPageDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8242D208A200B000F5D86 /* LandingPageDataController.swift */; };
 		0CC82431208A260E000F5D86 /* LandingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC82430208A260E000F5D86 /* LandingPageViewModel.swift */; };
+		0CCB24E220E1849600BB0B4A /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCB24E120E1849600BB0B4A /* LocalizationManager.swift */; };
+		0CCB24E420E1850300BB0B4A /* StringTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCB24E320E1850300BB0B4A /* StringTable.swift */; };
+		0CCB24E620E1853A00BB0B4A /* Commons.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CCB24E520E1853A00BB0B4A /* Commons.strings */; };
+		0CCB24EA20E1856700BB0B4A /* LandingPage.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CCB24E920E1856700BB0B4A /* LandingPage.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		0CC8242A208A1F37000F5D86 /* LandingPageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageDataProvider.swift; sourceTree = "<group>"; };
 		0CC8242D208A200B000F5D86 /* LandingPageDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageDataController.swift; sourceTree = "<group>"; };
 		0CC82430208A260E000F5D86 /* LandingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewModel.swift; sourceTree = "<group>"; };
+		0CCB24E120E1849600BB0B4A /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
+		0CCB24E320E1850300BB0B4A /* StringTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTable.swift; sourceTree = "<group>"; };
+		0CCB24E520E1853A00BB0B4A /* Commons.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Commons.strings; sourceTree = "<group>"; };
+		0CCB24E920E1856700BB0B4A /* LandingPage.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LandingPage.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,7 @@
 			children = (
 				0C28981D2088A9DB00079470 /* AppDelegate.swift */,
 				0C344521209A518500432EB0 /* Additions */,
+				0CCB24E020E1847A00BB0B4A /* Localization */,
 				0CC824212089B7E8000F5D86 /* Models */,
 				0C2898512088B49500079470 /* Network */,
 				0C7225BC208DEB2300B5BE8C /* Protocols */,
@@ -280,6 +289,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0CCB24E020E1847A00BB0B4A /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				0CCB24E120E1849600BB0B4A /* LocalizationManager.swift */,
+				0CCB24E320E1850300BB0B4A /* StringTable.swift */,
+				0CCB24E520E1853A00BB0B4A /* Commons.strings */,
+				0CCB24E920E1856700BB0B4A /* LandingPage.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -388,6 +408,8 @@
 				0C23CEB3208DDCDF00FA66F7 /* RoomTableViewCell.xib in Resources */,
 				0C2898232088A9DB00079470 /* Main.storyboard in Resources */,
 				0C324C392099DF4100143C39 /* AvailableHourView.xib in Resources */,
+				0CCB24E620E1853A00BB0B4A /* Commons.strings in Resources */,
+				0CCB24EA20E1856700BB0B4A /* LandingPage.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,8 +442,10 @@
 				0C324C3B2099DFC800143C39 /* AvailableHourView.swift in Sources */,
 				0C2898202088A9DB00079470 /* LandingPageViewController.swift in Sources */,
 				0CC824272089FC00000F5D86 /* Response.swift in Sources */,
+				0CCB24E420E1850300BB0B4A /* StringTable.swift in Sources */,
 				0C2898532088B57C00079470 /* Request.swift in Sources */,
 				0C7225BE208DEB3900B5BE8C /* NibLoadable.swift in Sources */,
+				0CCB24E220E1849600BB0B4A /* LocalizationManager.swift in Sources */,
 				0CC8242B208A1F37000F5D86 /* LandingPageDataProvider.swift in Sources */,
 				0C23CEB1208DDCC800FA66F7 /* RoomTableViewCell.swift in Sources */,
 				0CC824252089B97E000F5D86 /* GetRoomsResponse.swift in Sources */,
