@@ -9,6 +9,10 @@ import UIKit
 
 class LandingPageViewController: UIViewController {
 
+    private enum Constant {
+        static let totalAvailableHour = 12
+    }
+
     var viewModel: LandingPageViewModel!
 
     @IBOutlet private weak var filterHolderView: UIView!
@@ -20,9 +24,10 @@ class LandingPageViewController: UIViewController {
         initializeViewModel()
         viewModel.fetchRooms(with: nil)
         tableView.register(RoomTableViewCell.self, forCellReuseIdentifier: "RoomTableViewCell")
-        let nib = UINib(nibName: "RoomTableViewCell", bundle: nil)
+
+        let nib = RoomTableViewCell.defaultNib
         tableView.register(nib,
-                           forCellReuseIdentifier: "RoomTableViewCell")
+                           forCellReuseIdentifier: RoomTableViewCell.defaultNibName)
     }
 
     private func initializeViewModel() {
@@ -56,10 +61,16 @@ extension LandingPageViewController: UITableViewDelegate {
                 return UITableViewCell()
         }
 
-        if let roomCell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell",
+        if let roomCell = tableView.dequeueReusableCell(withIdentifier: RoomTableViewCell.defaultNibName,
+                                                        
                                                         for: indexPath) as? RoomTableViewCell {
             roomCell.roomNameLabel.text = room.name
             roomCell.roomExplanationLabel.text = "\(String(describing: room.capacity))"
+
+            // TODO: Take available hours list from response
+            roomCell.setAvailableHours(hourCount: Constant.totalAvailableHour,
+                                       availableHoursList: [])
+
             return roomCell
         }
 
