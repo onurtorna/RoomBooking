@@ -56,25 +56,23 @@ extension LandingPageViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // TODO: To be implemented
-        guard let room = viewModel.room(at: indexPath.row)
+        guard let room = viewModel.room(at: indexPath.row),
+            let roomCell = tableView.dequeueReusableCell(withIdentifier: RoomTableViewCell.defaultNibName,
+                                                         for: indexPath) as? RoomTableViewCell
             else {
                 return UITableViewCell()
         }
 
-        if let roomCell = tableView.dequeueReusableCell(withIdentifier: RoomTableViewCell.defaultNibName,
-                                                        
-                                                        for: indexPath) as? RoomTableViewCell {
-            roomCell.roomNameLabel.text = room.name
-            roomCell.roomExplanationLabel.text = "\(String(describing: room.capacity))"
-
-            // TODO: Take available hours list from response
-            roomCell.setAvailableHours(hourCount: Constant.totalAvailableHour,
-                                       availableHoursList: [])
-
-            return roomCell
+        roomCell.roomNameLabel.text = room.name
+        if let roomCapacity = room.capacity {
+            roomCell.roomExplanationLabel.text = "\(roomCapacity)"
         }
 
-        return UITableViewCell()
+        // TODO: Take available hours list from response
+        roomCell.setAvailableHours(hourCount: Constant.totalAvailableHour,
+                                   availableHoursList: [])
+
+        return roomCell
     }
 }
 
