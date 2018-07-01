@@ -25,6 +25,7 @@
 		0C324C3D2099EB1600143C39 /* AvailableHoursListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C324C3C2099EB1600143C39 /* AvailableHoursListView.swift */; };
 		0C344523209A51A300432EB0 /* UIView+LayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C344522209A51A300432EB0 /* UIView+LayoutConstraints.swift */; };
 		0C7225BE208DEB3900B5BE8C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7225BD208DEB3900B5BE8C /* NibLoadable.swift */; };
+		0C8B278C20E9699F0001996A /* AvailableHourCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B278B20E9699F0001996A /* AvailableHourCalculator.swift */; };
 		0CC824232089B806000F5D86 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC824222089B806000F5D86 /* Room.swift */; };
 		0CC824252089B97E000F5D86 /* GetRoomsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC824242089B97E000F5D86 /* GetRoomsResponse.swift */; };
 		0CC824272089FC00000F5D86 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC824262089FC00000F5D86 /* Response.swift */; };
@@ -79,6 +80,7 @@
 		0C324C3C2099EB1600143C39 /* AvailableHoursListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableHoursListView.swift; sourceTree = "<group>"; };
 		0C344522209A51A300432EB0 /* UIView+LayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutConstraints.swift"; sourceTree = "<group>"; };
 		0C7225BD208DEB3900B5BE8C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		0C8B278B20E9699F0001996A /* AvailableHourCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableHourCalculator.swift; sourceTree = "<group>"; };
 		0CC824222089B806000F5D86 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		0CC824242089B97E000F5D86 /* GetRoomsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomsResponse.swift; sourceTree = "<group>"; };
 		0CC824262089FC00000F5D86 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				0C28984F2088AE5E00079470 /* Resources */,
 				0CC82428208A1E60000F5D86 /* Scenes */,
 				0C2898502088AE6E00079470 /* Storyboards */,
+				0C8B278A20E969650001996A /* Utils */,
 			);
 			path = RoomBooking;
 			sourceTree = "<group>";
@@ -244,6 +247,14 @@
 				0C7225BD208DEB3900B5BE8C /* NibLoadable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0C8B278A20E969650001996A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C8B278B20E9699F0001996A /* AvailableHourCalculator.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		0CC824212089B7E8000F5D86 /* Models */ = {
@@ -435,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C324C3D2099EB1600143C39 /* AvailableHoursListView.swift in Sources */,
+				0C8B278C20E9699F0001996A /* AvailableHourCalculator.swift in Sources */,
 				0C2898552088C0A300079470 /* NetworkManager.swift in Sources */,
 				0CC8242E208A200B000F5D86 /* LandingPageDataController.swift in Sources */,
 				0CC824232089B806000F5D86 /* Room.swift in Sources */,
