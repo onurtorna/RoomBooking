@@ -31,8 +31,18 @@ class AvailableHourCalculator {
 
         for list in availableHourList {
             if let currentAvailableHours = calculateHourInterval(list) {
+
+                // Merge for ["07:00 - 07:15", "07:30 - 07:45"] should be [true, false, true, false]
                 availableHours = availableHours.merging(currentAvailableHours) { first, second in
-                    return second
+
+                    let minCount = min(first.count, second.count)
+                    var merged: [Bool] = Array(repeating: false, count: minCount)
+
+                    for index in 0..<minCount {
+                        merged[index] = first[index] || second[index]
+                    }
+
+                    return merged
                 }
             }
         }
