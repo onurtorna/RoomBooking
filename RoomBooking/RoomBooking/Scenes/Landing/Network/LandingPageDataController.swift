@@ -23,6 +23,7 @@ class LandingPageDataController: LandingPageDataProvider {
             if let data = data {
                 if let responseJSON = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]],
                     let response = GetRoomsResponse.init(with: responseJSON) {
+                    print(responseJSON)
                     completion(response, nil)
                 } else {
                     // Handle Error
