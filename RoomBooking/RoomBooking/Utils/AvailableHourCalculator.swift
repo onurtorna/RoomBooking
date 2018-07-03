@@ -17,6 +17,13 @@ class AvailableHourCalculator {
         static let maximumMinute = 60
     }
 
+
+    /// Calculates rooms' available hour intervals with given available hours list
+    /// For example with a list ["07:00 - 16:00", "18:00 - 19:00"]
+    /// Result would be [7: [true,true,true,true] , 8:[true,true,true,true], ..., 18:[true,true,true,true]]
+    ///
+    /// - Parameter availableHourList: Available hours string list with [HH:mm - HH:mm] format
+    /// - Returns: Available hour intervals with 15 minutes
     static func calculateRoomAvailableHours(_ availableHourList: [String]?) -> [Int: [Bool]]? {
         guard let availableHourList = availableHourList else { return nil }
 
@@ -32,6 +39,10 @@ class AvailableHourCalculator {
         return availableHours
     }
 
+    /// Calculates available hour intervals for a given string
+    ///
+    /// - Parameter hourInterval: Available hour string with "HH:mm - HH:mm" format
+    /// - Returns: Available hour intervals with 15 minutes
     static func calculateHourInterval(_ hourInterval: String) -> [Int: [Bool]]? {
          let hours = hourInterval.split(separator: Constant.hourIntervalSeperator).compactMap { $0.replacingOccurrences(of: " ", with: "") }
 
@@ -78,6 +89,14 @@ class AvailableHourCalculator {
         return availableHours
     }
 
+    /// Calculates available minute intervals within an hour
+    /// For example with begin minute of 0 and end minute of 30
+    /// Would result [true, true, false, false] indicating that first half of the hour is available
+    ///
+    /// - Parameters:
+    ///   - beginMinute: Hour availability start minute eg. 0, 15, 30, 45
+    ///   - endMinute: Hour availability end minute eg. 0, 15, 30, 45
+    /// - Returns: Availability intervals of the hour
     static func calculateWithinHour(beginMinute: Int,
                                     endMinute: Int) -> [Bool] {
 
