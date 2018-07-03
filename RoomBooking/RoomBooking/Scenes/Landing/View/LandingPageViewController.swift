@@ -9,10 +9,6 @@ import UIKit
 
 class LandingPageViewController: UIViewController {
 
-    private enum Constant {
-        static let totalAvailableHour = 12
-    }
-
     var viewModel: LandingPageViewModel!
 
     @IBOutlet private weak var filterHolderView: UIView!
@@ -68,9 +64,11 @@ extension LandingPageViewController: UITableViewDelegate {
             roomCell.roomExplanationLabel.text = "\(roomCapacity)"
         }
 
-        // TODO: Take available hours list from response
-        roomCell.setAvailableHours(hourCount: Constant.totalAvailableHour,
-                                   availableHoursList: [])
+        if let availableHours = AvailableHourCalculator.calculateRoomAvailableHours(room.availableHours) {
+
+            roomCell.setAvailableHours(hourCount: Global.openHourCount,
+                                       availableHoursList: availableHours)
+        }
 
         return roomCell
     }

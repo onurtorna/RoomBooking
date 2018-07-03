@@ -15,7 +15,7 @@ class RoomTableViewCell: UITableViewCell, NibLoadable {
 
     var availableHoursListView: AvailableHoursListView?
 
-    func setAvailableHours(hourCount: Int, availableHoursList: [String]) {
+    func setAvailableHours(hourCount: Int, availableHoursList: [Int: [Bool]]) {
         availableHoursListView = AvailableHoursListView(frame: availableHoursContainerView.frame,
                                                         hourCount: hourCount,
                                                         availableHourList: availableHoursList)

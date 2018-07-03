@@ -11,14 +11,17 @@ class AvailableHoursListView: UIView {
 
     var stackView: UIStackView!
 
-    init(frame: CGRect, hourCount: Int, availableHourList: [String]) {
+    init(frame: CGRect, hourCount: Int, availableHourList: [Int: [Bool]]) {
         super.init(frame: frame)
 
         stackView = UIStackView.init(frame: frame)
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
-        for _ in 0..<hourCount {
+        for index in Global.bookingStartHour..<(hourCount + Global.bookingStartHour) {
             let availableHourView = AvailableHourView.loadFromNib()
+
+            availableHourView.customizeViews(availableList: availableHourList[index],
+                                             hourText: "\(index)")
             stackView.addArrangedSubview(availableHourView)
         }
         stackView.translatesAutoresizingMaskIntoConstraints = false

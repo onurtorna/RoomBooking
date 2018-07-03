@@ -16,21 +16,19 @@ class AvailableHourView: UIView, NibLoadable {
 
     @IBOutlet private weak var hourLabel: UILabel!
 
-    var availableTimeIntervals: [Bool] = []
-    private var timeIntervalViews: [UIView] = []
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-        initializeViews()
-    }
+    private lazy var timeIntervalViews: [UIView] = [
+        firstQuarterView,
+        secondQuarterView,
+        thirdQuarterView,
+        fourthQuarterView
+    ]
 
     /// Customizes subviews with available time interval list and hour text
     ///
     /// - Parameters:
     ///   - availableList: Un/AvailableTime intervals in a list
     ///   - hourText: Hour text
-    func customizeViews(availableList: [Bool], hourText: String) {
+    func customizeViews(availableList: [Bool]?, hourText: String) {
         hourLabel.text = hourText
         setAvailableTimeIntervals(availableList: availableList)
     }
@@ -44,15 +42,16 @@ extension AvailableHourView {
         secondQuarterView.backgroundColor = UIColor.red
         thirdQuarterView.backgroundColor = UIColor.green
         fourthQuarterView.backgroundColor = UIColor.red
-        hourLabel.text = "11"
     }
 
-    private func setAvailableTimeIntervals(availableList: [Bool]) {
+    private func setAvailableTimeIntervals(availableList: [Bool]?) {
 
-        for i in 0..<availableList.count {
+        let availability: [Bool] = availableList ?? [false, false, false, false]
+
+        for i in 0..<availability.count {
 
             if i < timeIntervalViews.count {
-                timeIntervalViews[i].backgroundColor = availableList[i] ? UIColor.green : UIColor.red
+                timeIntervalViews[i].backgroundColor = availability[i] ? UIColor.green : UIColor.red
             }
         }
     }
